@@ -9,3 +9,35 @@
  background: none;
 }
 
+#button-toggle {
+  width: 120px;
+  height: 60px;
+  background: rgb(183, 0, 255);
+  margin: auto;
+  margin-top: 300px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border:none;
+  outline:none;
+   
+}
+
+.circle{
+  content: '';
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  transition: 1s linear;
+}
+
+ /* @keyframes putOn {
+
+  to{
+   margin-left:70px;
+   background:red;
+  }
+}  */
