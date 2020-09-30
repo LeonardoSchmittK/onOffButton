@@ -1,43 +1,80 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::selection {
- background: none;
+  background: none;
+}
+
+.container {
+  background-color: red;
+  max-width: 400px;
+  margin: auto;
 }
 
 #button-toggle {
   width: 120px;
   height: 60px;
-  background: rgb(183, 0, 255);
+  position: relative;
+  background: rgb(202, 111, 255);
   margin: auto;
   margin-top: 300px;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  border:none;
-  outline:none;
-   
+  box-shadow: inset 1px -10px 30px #5f15b3;
+  border: none;
+  outline: none;
 }
 
-.circle{
-  content: '';
-  background-color: rgb(255, 255, 255);
+#button-toggle:hover {
+  transform: scale(1.01);
+}
+
+.txt {
+  width: auto;
+  padding: 10px;
+  position: absolute;
+  background-color: transparent;
+  font-size: 30px;
+  color: rgb(55, 54, 56);
+  font-family: Ubuntu, sans-serif;
+  display: none;
+  animation: popUp 1s;
+}
+
+.txtOn {
+  left: 130px;
+}
+
+.txtOff {
+  left: -74px;
+}
+
+.circle {
+  background-color: #ffffff;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   position: absolute;
-  transition: 1s linear;
+  transition: 0.2s linear;
+  margin-left: 10px;
+  box-shadow: inset 10px 10px 10px rgba(153, 151, 151, 0.37);
+  cursor: pointer;
 }
 
- /* @keyframes putOn {
+[class$="on"] {
+  background: #ffffff;
+  margin-left: 60px;
+  display: none;
+  transition: 0.2s linear;
+  animation: popUp 1.3s linear;
+}
 
-  to{
-   margin-left:70px;
-   background:red;
+@keyframes popUp {
+  from {
+    opacity: 0;
   }
-}  */
+}
